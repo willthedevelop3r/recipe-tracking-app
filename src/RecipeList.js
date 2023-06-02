@@ -4,8 +4,6 @@ import "./App.css";
 // RECIPES AND DELETERECIPE HELPER FUNCTION PASSED AS PROPS
 
 function RecipeList({ recipes, deleteRecipe }) {
-  // PURE FUNCTION TO HANDLE DELETES
-  const handleDelete = (id) => deleteRecipe(id);
 
   // RENDER A TABLE DISPLAYING RECIPE INFORMATION
   return (
@@ -40,7 +38,7 @@ function RecipeList({ recipes, deleteRecipe }) {
                   <p>{preparation}</p>
                 </td>
                 <td>
-                  <button name="delete" onClick={() => handleDelete(id)}>
+                  <button name="delete" onClick={() => deleteRecipe(id)}>
                     Delete
                   </button>
                 </td>
